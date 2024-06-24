@@ -6,12 +6,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
+@Table(name = "tb_account")
 public class Account {
 
 	@Id
@@ -22,11 +24,11 @@ public class Account {
 	private String number;
 	private String agency;
 	
-	@Column(precision = 13, scale = 2)
+	@Column(scale = 13, precision = 2)
 	private BigDecimal balance;
 	//Defini o numero de casas decimais
 	
-	@Column(precision = 13, scale = 2)
+	@Column(name = "additional_limit", scale = 13, precision = 2)
 	private BigDecimal limit;
 	
 	
