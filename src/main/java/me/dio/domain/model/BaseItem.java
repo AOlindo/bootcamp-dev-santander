@@ -7,9 +7,9 @@ import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
-@MappedSuperclass
 @Setter
 @Getter
+@MappedSuperclass
 public abstract class BaseItem {
 
 	@Id
