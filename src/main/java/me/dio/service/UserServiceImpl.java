@@ -1,5 +1,6 @@
 package me.dio.service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import org.springframework.stereotype.Service;
 import me.dio.domain.model.User;
@@ -26,6 +27,11 @@ public class UserServiceImpl implements UserService {
 			//este número de conta já existe
 		}
 		return userRepository.save(userToCreate);
+	}
+
+	@Override
+	public List<User> findAll() {
+		return this.userRepository.findAll();
 	}
 
 }
